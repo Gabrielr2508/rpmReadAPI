@@ -1,0 +1,35 @@
+{
+  "name": "rpmReadAPI",
+  "version": "1.0.0",
+  "description": "RESTful rpmReadAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielr2508/todoListApi.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "RPM"
+  ],
+  "author": "Gabriel Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielr2508/rpmReadAPI/issues"
+  },
+  "homepage": "https://github.com/Gabrielr2508/rpmReadAPI#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.3",
+    "mongoose": "^4.11.8",
+    "morgan": "^1.8.2"
+  }
+}
