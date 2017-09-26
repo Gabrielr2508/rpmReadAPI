@@ -14,7 +14,7 @@ var mongoose = require('mongoose'),
     var new_read = new Read(req.body);
     new_read.save(function(err, read) {
       if(err) {
-        return res.status(666).send({
+        return res.status(422).send({
           message: err
         });
       } else {
