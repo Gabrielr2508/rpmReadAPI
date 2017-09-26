@@ -13,8 +13,13 @@ var mongoose = require('mongoose'),
   exports.create_a_read = function(req, res) {
     var new_read = new Read(req.body);
     new_read.save(function(err, read) {
-      if(err) res.send(err);
-      res.json(read);
+      if(err) {
+        return res.status(666).send({
+          message: err
+        });
+      } else {
+        res.json(read);
+      }
     });
   };
 
