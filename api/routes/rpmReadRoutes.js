@@ -6,12 +6,15 @@ module.exports = function(app) {
   //todoList Routes
   app.route('/reads')
     .get(rpmReads.list_all_reads)
-    .post(userHandlers.loginRequired, rpmReads.create_a_read);
+    //.post(userHandlers.loginRequired, rpmReads.create_a_read);
+    .post(rpmReads.create_a_read);
 
   app.route('/reads/:readId')
     .get(rpmReads.read_a_read)
-    .put(userHandlers.loginRequired, rpmReads.update_a_read)
-    .delete(userHandlers.loginRequired, rpmReads.delete_a_read);
+  //  .put(userHandlers.loginRequired, rpmReads.update_a_read)
+    .put(rpmReads.update_a_read)
+//    .delete(userHandlers.loginRequired, rpmReads.delete_a_read);
+    .delete(rpmReads.delete_a_read);
 
   app.route('/auth/register')
     .post(userHandlers.register);
