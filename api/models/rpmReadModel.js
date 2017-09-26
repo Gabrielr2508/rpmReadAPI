@@ -18,6 +18,10 @@ var ReadSchema = new Schema({
   rpm_indutivo: {
     type: Number,
     required: true
+  },
+  voltage: {
+    type: Number,
+    required: true
   }
   // status: {
   //   type: [{
