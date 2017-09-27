@@ -30,6 +30,13 @@ var mongoose = require('mongoose'),
     });
   };
 
+  exports.read_motor = function(req, res){
+    Read.findById(req.params.motorNumber, function(err, read){
+      if (err) res.send(err);
+      res.json(read);
+    });
+  };
+
   exports.update_a_read = function(req, res) {
   Read.findOneAndUpdate({_id: req.params.readId}, req.body, {new: true}, function(err, read) {
     if (err)

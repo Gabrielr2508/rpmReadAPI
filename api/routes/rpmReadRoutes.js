@@ -16,6 +16,9 @@ module.exports = function(app) {
 //    .delete(userHandlers.loginRequired, rpmReads.delete_a_read);
     .delete(rpmReads.delete_a_read);
 
+  app.route('/reads/motor/:motorNumber')
+    .get(rpmReads.read_motor);
+    
   app.route('/auth/register')
     .post(userHandlers.register);
 
