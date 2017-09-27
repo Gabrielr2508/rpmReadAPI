@@ -31,7 +31,7 @@ var mongoose = require('mongoose'),
   };
 
   exports.read_motor = function(req, res){
-    Read.findById(req.params.motorNumber, function(err, read){
+    Read.find({motor_numer: req.params.motorNumber}, function(err, read){
       if (err) res.send(err);
       res.json(read);
     });
